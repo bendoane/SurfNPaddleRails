@@ -33,14 +33,31 @@ h3{
   position:absolute;
   font-size: 18;
   color: white;
-  top: 15px;
-  margin-left: 50px;
+  top: 30px;
+  left: 90px;
   display:inline;
+  width: 100%;
+  clear:left;
 }
 #cover .cat-top-head{
   width:50px;
   border-radius: 100%;
   display:inline;
+  float:left;
+  clear:left;
+  position:absolute;
+  top:15px;
+  left:30px;
+  clear:left;
+}
+#cover-nav-text{
+  color: white;
+  text-align: right;
+  position:absolute;
+  top:30px;
+  right: 50px;
+  display:inline;
+  word-spacing: 20px;
 }
 
 
