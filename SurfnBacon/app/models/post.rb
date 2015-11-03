@@ -10,6 +10,15 @@ class Post
     self.created_at = args[:created_at] || Time.now
   end
 
+  def photo
+    if id == 1 
+      "grumpy-cat.jpg"
+    elsif id == 2
+      "lil-bub-cat.jpg"
+
+  end
+
+
   def self.all
     unless defined?(@posts)
       @posts = [
