@@ -45,27 +45,25 @@
       </div>
     </div>
     <div id="bottombar">
-      <h1 class="bottombar-text">U CAN HAS MOAR POSTS</h1>
+      <h1 class="bottombar-text">MOAR POPLAR POSTS</h1>
     </div>
+
+
     <div id="footlinks">
       <div class="screen"></div>
       <% @post2.each_with_index do |p, index| %>
         <% if index == 0 %>
-          <a href="http://www.grumpycats.com/"><%= image_tag "lil-bub-cat.jpg", :class => "cat1" %></a>
+          <a href="http://www.grumpycats.com/"><%= image_tag p.photo, :class => "cat1" %></a>
         <% else %>
-          <a href="http://www.grumpycats.com/"><%= image_tag "lil-bub-cat.jpg", :class => "cat2" %></a>
+          <a href="http://www.grumpycats.com/"><%= image_tag p.photo, :class => "cat2" %></a>
         <% end %>
         <div class="cattext">
           <h4><%= p.title %></h4>
         </div>
-      <% end %>
-      <a href="http://lilbub.com/"><%= image_tag "lil-bub-cat.jpg", :class =>"cat2"%></a>
-      
-      <a href="https://www.facebook.com/colonelmeowinthecity"><%= image_tag "colonel-meow-cat.jpeg", :class =>"cat2"%></a>
+        <%end%>
+      </div>
 
-      <a href="http://snoopy409.tumblr.com/"><%= image_tag "snoopy-cat.jpg", :class => "cat2"%></a>
 
-    </div>
     <div id="footer">
       <a href="https://www.youtube.com/watch?v=QH2-TGUlwu4"><%= image_tag "nyan-cat.jpg"%></a>
       <p class="footer-left">Kittens & Bacon 2015. All Rights Reserved.</p>
