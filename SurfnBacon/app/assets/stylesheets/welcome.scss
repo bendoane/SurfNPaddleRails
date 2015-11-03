@@ -201,10 +201,11 @@ h3{
   position:relative;
 }
 .cattext{
-  position:absolute;
+  position: absolute;
   color: #333333;
-  width: 100%;
+  // width: 100%;
   bottom: 10px;
+  // top: -10px;
   margin-left: 15px;
   font-size: 32;
   text-transform: capitalize;

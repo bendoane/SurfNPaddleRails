@@ -6,10 +6,10 @@ class WelcomeController < ApplicationController
     @post2 = Post.all.reject{|p| p == @post}
   end
 
-  def about
+  def show
     @post = Post.find(params[:id].to_i)
-   @posts = Post.all.reject{|p| p == @post}
-   render :template => "post/index.html.erb"
+   @post2 = Post.all.reject{|p| p == @post}
+   render :template => "welcome/index.html.erb"
   end
 
 

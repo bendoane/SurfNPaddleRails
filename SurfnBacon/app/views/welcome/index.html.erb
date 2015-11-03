@@ -53,9 +53,9 @@
       <div class="screen"></div>
       <% @post2.each_with_index do |p, index| %>
         <% if index == 0 %>
-          <a href="http://www.grumpycats.com/"><%= image_tag p.photo, :class => "cat1" %></a>
+          <a href="<%= post_path :id => p.id%>"><%= image_tag p.photo, :class => "cat1" %></a>
         <% else %>
-          <a href="http://www.grumpycats.com/"><%= image_tag p.photo, :class => "cat2" %></a>
+          <a href="<%= post_path :id => p.id%>"><%= image_tag p.photo, :class => "cat2" %></a>
         <% end %>
         <div class="cattext">
           <h4><%= p.title %></h4>
