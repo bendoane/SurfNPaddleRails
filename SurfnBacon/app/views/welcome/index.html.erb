@@ -14,28 +14,24 @@
 
     <div id="article">
       <div class="article-header">
-        <h2>TUMMY FILLING AND HEART WARMING</h2>
+        <h2><%= @post.title %></h2>
       </div>
       <div class="article-header-info">
         <%= image_tag "kittyauthor.png" %>
-        <p class="author">Mr. Fluffers</p>
-        <p>on 23 October 2015</p>
+        <p class="author"><%= @post.author %></p>
+        <p>on <%= @post.created_at %></p>
       </div>
-        <p>Bacon ipsum dolor amet ham hock shankle drumstick shank boudin bacon cupim. Doner picanha pig hamburger meatloaf. Short ribs alcatra beef, shoulder prosciutto leberkas pork loin andouille frankfurter ribeye. Turkey venison porchetta kevin, turducken pork ham hock andouille beef leberkas biltong short loin bresaola ground round boudin. Rump prosciutto venison shank. Drumstick prosciutto leberkas pig.</p>
-        <br />
-        <p>Climb a tree, wait for a fireman jump to fireman then scratch his face scratch the furniture, yet stare at the wall, play with food and get confused by dust. All of a sudden cat goes crazy stare out the window, mark territory, for find empty spot in cupboard and sleep all day so present belly, scratch hand when stroked sit by the fire. Intrigued by the shower chew on cable. Climb leg poop in litter box, scratch the walls, present belly, scratch hand when stroked for loves cheeseburgers. The dog smells bad meow, so lounge in doorway. Destroy couch swat at dog, but touch water with paw then recoil in horror. White cat sleeps on a black shirt under the bed, eat from dog's food yet leave dead animals as gifts chew iPad power cord hiss at vacuum cleaner or eat prawns daintily with a claw then lick paws clean wash down prawns with a lap of carnation milk then retire to the warmest spot on the couch to claw at the fabric before taking a catnap.</p>
+        <p><%= @post.body%></p>
         <br />
         <h3 class="quote">Holy Crispy Kitty!</h3>
-        <p>Biltong pork belly kevin tongue beef shank drumstick ham hock short loin andouille cupim cow tri-tip jowl alcatra. Strip steak sausage biltong ribeye, short ribs fatback brisket tongue pork belly beef pancetta spare ribs. Beef prosciutto alcatra, chuck picanha pork belly venison turducken. Short ribs swine pig, sausage pastrami kielbasa andouille ground round picanha. Biltong leberkas jerky meatball, pork belly frankfurter beef ribs fatback bresaola swine corned beef kielbasa shank. Bacon meatloaf fatback jerky. Pastrami rump shankle swine shoulder.</p>
-        <br />
-        <p>Eat a plant, kill a hand intently stare at the same spot chase mice, meow, but where is my slave? i'm getting hungry or hide from vacuum cleaner hopped up on catnip. Kick up litter kick up litter give attitude, but poop in litter box, scratch the walls. Sleep on keyboard stare at ceiling ears back wide eyed but play riveting piece on synthesizer keyboard. Chew on cable chase mice. Cat slap dog in face poop in litter box, scratch the walls and hide head under blanket so no one can see roll on the floor purring your whiskers off.</p>
+        <p><%= @post.body%></p>
         <%= image_tag"button-save.png", :class => "article-buttons2"%>
         <a href="http://uptobuildingcode.blogspot.com/"><%= image_tag"comment_button.png", :class => "article-buttons"%>
         <a href="https://www.facebook.com/ben.doane.3"> <%= image_tag "share-button.png", :class => "article-buttons3"%>
     </div>
     <div id="infobar">
       <%= image_tag "kittyauthor.png", :class => "author"%>
-      <p class="infobar-section-heading">Mr. Fluffers</p>
+      <p class="infobar-section-heading"><%= @post.author %></p>
       <a href="https://www.youtube.com/watch?v=-5f54K4y3rc">Eating Bacon</a>
       <text>|</text>
       <a href="https://www.youtube.com/watch?v=LDsBbwRATAM">Catching Bacon</a>
@@ -49,27 +45,25 @@
       </div>
     </div>
     <div id="bottombar">
-      <h1 class="bottombar-text">U CAN HAS MOAR POSTS</h1>
+      <h1 class="bottombar-text">MOAR POPLAR POSTS</h1>
     </div>
+
+
     <div id="footlinks">
       <div class="screen"></div>
-      <a href="http://www.grumpycats.com/"><%= image_tag "grumpy-cat.jpg", :class => "cat1"%></a>
-      <div class="cattext">
-        <h4>Lil Bub</h4>
+      <% @post2.each_with_index do |p, index| %>
+        <% if index == 0 %>
+          <a href="<%= post_path :id => p.id%>"><%= image_tag p.photo, :class => "cat1" %></a>
+        <% else %>
+          <a href="<%= post_path :id => p.id%>"><%= image_tag p.photo, :class => "cat2" %></a>
+        <% end %>
+        <div class="cattext">
+          <h4><%= p.title %></h4>
+        </div>
+        <%end%>
       </div>
-      <a href="http://lilbub.com/"><%= image_tag "lil-bub-cat.jpg", :class =>"cat2"%></a>
-      <div class="cattext">
-        <h4>Colonel Meow</h4>
-      </div>
-      <a href="https://www.facebook.com/colonelmeowinthecity"><%= image_tag "colonel-meow-cat.jpeg", :class =>"cat2"%></a>
-      <div class="cattext">
-        <h4>Snoopy</h4>
-      </div>
-      <a href="http://snoopy409.tumblr.com/"><%= image_tag "snoopy-cat.jpg", :class => "cat2"%></a>
-      <div class="cattext">
-        <h4>Grumpy Cat</h4>
-      </div>
-    </div>
+
+
     <div id="footer">
       <a href="https://www.youtube.com/watch?v=QH2-TGUlwu4"><%= image_tag "nyan-cat.jpg"%></a>
       <p class="footer-left">Kittens & Bacon 2015. All Rights Reserved.</p>
