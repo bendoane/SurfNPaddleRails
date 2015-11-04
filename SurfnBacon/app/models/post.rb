@@ -19,6 +19,8 @@ class Post
       "colonel-meow-cat.jpeg"
     elsif id == 4
       "snoopy-cat.jpg"
+    else
+      "hipster-cat.jpg"
     end
 
 
