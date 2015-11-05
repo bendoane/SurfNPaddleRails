@@ -1,0 +1,12 @@
+
+<h3>Maek Post, plz</h3>
+<br>
+    <%= form_for @post, :url => "/form" do |x| %>
+    <%= label_tag("Kitten and Bacon Thoughts:") %>
+    <br>
+    <div class "textfield">
+      <%= x.text_area :body, size: "50x20"%>
+    </div>
+    <br>
+    <%= x.submit "Right Meow" %>
+    <% end %>

@@ -12,6 +12,10 @@ class WelcomeController < ApplicationController
    render :template => "welcome/index.html.erb"
   end
 
+  def form
+    @post = Post.new
+    render layout: "form.html.erb"
+  end
 
 
 
